@@ -1,0 +1,57 @@
+@media (color) {
+  html { color: lemonchiffon; background: indigo }
+  :any-link { color: lightskyblue; background: transparent }
+  ::selection { color: purple; background: lemonchiffon }
+  em { text-shadow: 1pt 1pt 1pt mediumpurple }
+  strong { text-shadow: 1pt 1pt 1pt fuchsia }
+  abbr { text-shadow: 1pt 1pt 1pt fuchsia }
+  b { text-shadow: 1pt 1pt 1pt skyblue }
+  i { text-shadow: 1pt 1pt 1pt yellow }
+}
+
+@media (prefers-color-scheme: light) {
+  html { color: indigo; background: lemonchiffon }
+  :any-link { color: mediumblue }
+  ::selection { color: lemonchiffon; background: purple }
+}
+
+:focus {
+  outline: thick dotted;
+}
+
+html {
+  font-family: monospace;
+  font-size: max(3ch, 1vw + 1vh);
+  line-height: 1.618;
+  transition: 1s;
+}
+
+h1 {
+  font-size: 1.618rem;
+  margin-block: 1rem;
+}
+
+h2 { font-size: 1.382rem }
+dt { font-size: 1.236rem; font-weight: 600 }
+dt ~ dt { margin-top: 1em }
+abbr { font-weight: 600 }
+.\* { font-size: 1.618em }
+
+article {
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+  padding-block: 1rem;
+  padding-inline: 1rem;
+}
+
+p {
+  align-self: flex-start;
+}
+
+@media (orientation: portrait) {
+  html {
+    filter: hue-rotate(12deg);
+    font-family: sans-serif;
+  }
+}
